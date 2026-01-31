@@ -1,166 +1,249 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Página en Mantenimiento</title>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <title>Win95 – Maintenance Mode</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <style>
     * {
-      margin: 0;
-      padding: 0;
       box-sizing: border-box;
+      font-family: "Courier New", monospace;
     }
 
-    body, html {
-      height: 100%;
-      font-family: 'Courier New', Courier, monospace;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background: linear-gradient(135deg, #001f3d, #002e4d, #002b3e);  
-      background-size: 400% 400%;
-      animation: gradientBackground 5s ease infinite;
-    }
-
-    .glitch-container {
-      position: relative;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
+    html, body {
       width: 100%;
+      height: 100%;
     }
 
-    .glitch-text {
-      font-size: 4rem;
-      color: transparent;
-      background: linear-gradient(45deg, #00c2ff, #9b00d1);  
-      -webkit-background-clip: text;
-      background-clip: text;
-      text-transform: uppercase;
-      letter-spacing: 5px;
+    /* FONDO WINDOWS XP */
+    body {
+      margin: 0;
+      overflow: hidden;
+      background: #000;
       position: relative;
-      z-index: 10;
-      text-align: center;
-      display: inline-block;
     }
 
-    .glitch-text::before,
-    .glitch-text::after {
-      content: 'Página en Mantenimiento';
-      position: absolute;
-      top: 0;
-      left: 0;
-      color: #fff;
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background-image: url("https://upload.wikimedia.org/wikipedia/en/2/27/Bliss_%28Windows_XP%29.png");
+      background-size: cover;
+      background-position: center;
       z-index: -1;
-      animation: glitch-anim 1s infinite linear;
     }
 
-    .glitch-text::before {
-      left: -2px;
-      text-shadow: 2px 0 0 rgba(0,255,255,0.8), -2px 0 0 rgba(255,0,255,0.8);
-      animation-delay: -0.1s;
+    /* ESCRITORIO */
+    .desktop {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
-    .glitch-text::after {
-      left: 2px;
-      text-shadow: -2px 0 0 rgba(0,255,255,0.8), 2px 0 0 rgba(255,0,255,0.8);
-      animation-delay: -0.3s;
+    /* VENTANA WIN95 */
+    .window {
+      width: 360px;
+      background: #c0c0c0;
+      border: 2px solid #000;
+      box-shadow: inset -2px -2px #808080, inset 2px 2px #ffffff;
     }
 
-    @keyframes glitch-anim {
-      0% {
-        clip-path: inset(0% 0% 100% 0);
-        transform: translate(0);
-      }
-      10% {
-        clip-path: inset(10% 0 90% 0);
-        transform: translate(3px, -2px);
-      }
-      20% {
-        clip-path: inset(20% 0 80% 0);
-        transform: translate(-4px, 3px);
-      }
-      30% {
-        clip-path: inset(30% 0 70% 0);
-        transform: translate(-5px, -4px);
-      }
-      40% {
-        clip-path: inset(40% 0 60% 0);
-        transform: translate(6px, 3px);
-      }
-      50% {
-        clip-path: inset(50% 0 50% 0);
-        transform: translate(-3px, -5px);
-      }
-      60% {
-        clip-path: inset(60% 0 40% 0);
-        transform: translate(4px, 2px);
-      }
-      70% {
-        clip-path: inset(70% 0 30% 0);
-        transform: translate(-2px, 6px);
-      }
-      80% {
-        clip-path: inset(80% 0 20% 0);
-        transform: translate(3px, -3px);
-      }
-      90% {
-        clip-path: inset(90% 0 10% 0);
-        transform: translate(-6px, 1px);
-      }
-      100% {
-        clip-path: inset(0% 0% 100% 0);
-        transform: translate(0);
-      }
+    .title-bar {
+      background: linear-gradient(to right, #000080, #0000aa);
+      color: white;
+      padding: 6px 8px;
+      font-weight: bold;
+      display: flex;
+      justify-content: space-between;
     }
 
-    @keyframes gradientBackground {
-      0% {
-        background-position: 0% 50%;
-      }
-      50% {
-        background-position: 100% 50%;
-      }
-      100% {
-        background-position: 0% 50%;
-      }
+    .content {
+      padding: 14px;
+      font-size: 12px;
     }
 
-    @media screen and (max-width: 600px) {
-      .glitch-text {
-        font-size: 3rem;
-      }
+    .headline {
+      font-size: 18px;
+      font-weight: bold;
     }
 
-    @media screen and (max-width: 400px) {
-      .glitch-text {
-        font-size: 2.5rem;
+    .dos {
+      background: black;
+      color: #00ff00;
+      padding: 8px;
+      margin: 10px 0;
+    }
+
+    /* BOTONES */
+    button {
+      background: #c0c0c0;
+      border: 2px solid #000;
+      box-shadow: inset -2px -2px #808080, inset 2px 2px #ffffff;
+      padding: 4px 16px;
+      cursor: pointer;
+    }
+
+    button:active {
+      box-shadow: inset 2px 2px #808080, inset -2px -2px #ffffff;
+    }
+
+    /* BARRA DE TAREAS */
+    .taskbar {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 38px;
+      background: #c0c0c0;
+      border-top: 2px solid #ffffff;
+      display: flex;
+      align-items: center;
+      padding: 4px;
+    }
+
+    .start {
+      font-weight: bold;
+      margin-right: 10px;
+    }
+
+    /* ================= */
+    /* 🦠 VIRUS EFECTO */
+    /* ================= */
+    #virus {
+      position: fixed;
+      inset: 0;
+      background: rgba(120, 0, 0, 0.85);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+      animation: flash 0.2s infinite;
+    }
+
+    @keyframes flash {
+      0% { background-color: rgba(120,0,0,0.9); }
+      50% { background-color: rgba(200,0,0,0.9); }
+      100% { background-color: rgba(120,0,0,0.9); }
+    }
+
+    .virus-window {
+      width: 320px;
+      background: #c0c0c0;
+      border: 3px solid #000;
+    }
+
+    .virus-title {
+      background: darkred;
+      color: white;
+      padding: 6px;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    .virus-content {
+      padding: 12px;
+      text-align: center;
+    }
+
+    .glitch {
+      color: red;
+      font-weight: bold;
+      animation: glitch 0.3s infinite;
+    }
+
+    @keyframes glitch {
+      0% { transform: translate(0); }
+      25% { transform: translate(-2px,1px); }
+      50% { transform: translate(2px,-1px); }
+      75% { transform: translate(-1px,2px); }
+      100% { transform: translate(0); }
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 600px) {
+      .window {
+        width: 90%;
       }
     }
   </style>
 </head>
 <body>
-  <div class="glitch-container">
-    <h1 class="glitch-text">Página en Mantenimiento</h1>
+
+<!-- VIRUS OVERLAY -->
+<div id="virus">
+  <div class="virus-window">
+    <div class="virus-title">⚠️ VIRUS DETECTADO ⚠️</div>
+    <div class="virus-content">
+      <p>
+        Se ha detectado actividad maliciosa<br>
+        en el sistema.
+      </p>
+      <p class="glitch">EL SISTEMA ESTÁ COMPROMETIDO</p>
+      <button id="closeVirus">Cerrar</button>
+    </div>
+  </div>
+</div>
+
+<div class="desktop">
+
+  <!-- Ventana principal -->
+  <div class="window main">
+    <div class="title-bar">
+      <span>Maintenance Mode</span>
+      <span>⚙️</span>
+    </div>
+
+    <div class="content">
+      <p class="headline">Windows 95</p>
+
+      <div class="dos">
+        C:\SYSTEM&gt; MAINTENANCE_MODE ENABLED<br>
+        C:\SYSTEM&gt; UPDATING FILES...<br>
+        C:\SYSTEM&gt; PLEASE WAIT _
+      </div>
+
+      <p>
+        El sistema se encuentra<br>
+        <strong>en mantenimiento</strong>.
+      </p>
+
+      <div class="actions">
+        <button id="okBtn">Aceptar</button>
+      </div>
+    </div>
   </div>
 
-  <script>
-    document.addEventListener("DOMContentLoaded", function() {
-      const glitchText = document.querySelector('.glitch-text');
+</div>
 
-      function startGlitch() {
-        const randomDelay = Math.random() * 0.5 + 0.1; // Intervalo aleatorio entre 0.1s y 0.5s
-        const randomAnimationDuration = Math.random() * 0.8 + 0.4; // Duración aleatoria entre 0.4s y 1.2s
-        glitchText.style.animationDuration = `${randomAnimationDuration}s`;
-        glitchText.style.animationDelay = `${randomDelay}s`;
+<!-- Barra de tareas -->
+<div class="taskbar">
+  <button class="start" id="startBtn">Inicio</button>
+  <span class="task">Maintenance Mode</span>
+</div>
 
-        setTimeout(startGlitch, randomDelay * 1000);
-      }
+<script>
+  const startBtn = document.getElementById("startBtn");
+  const virus = document.getElementById("virus");
+  const closeVirus = document.getElementById("closeVirus");
+  const okBtn = document.getElementById("okBtn");
 
-      startGlitch(); // Inicia el efecto
-    });
-  </script>
+  /* Inicio → Virus */
+  startBtn.addEventListener("click", () => {
+    virus.style.display = "flex";
+  });
+
+  /* Cerrar virus */
+  closeVirus.addEventListener("click", () => {
+    virus.style.display = "none";
+  });
+
+  /* Botón aceptar */
+  okBtn.addEventListener("click", () => {
+    alert("El sistema sigue en mantenimiento 💾");
+  });
+</script>
+
 </body>
 </html>
