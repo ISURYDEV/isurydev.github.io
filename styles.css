@@ -1,148 +1,103 @@
-/* Estilo global */
-body {
-    margin: 0;
-    padding: 0;
-    font-family: 'VT323', sans-serif;
-    background-color: #111f51;
-    color: #18cdd9;
-    text-align: center;
-    font-size: 24px;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-a {
-    text-decoration: none; /* Quita la línea subrayada */
-    color: inherit; /* Hereda el color del texto principal (en este caso, el color definido en el body) */
+body, html {
+  height: 100%;
+  font-family: 'Courier New', Courier, monospace;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: black;
 }
 
-/* Estilo del fondo animado */
-.background-video {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
+.glitch-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
 }
 
-.background-video video {
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
+.glitch-text {
+  font-size: 4rem;
+  color: white;
+  position: relative;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  z-index: 10;
 }
 
-/* Estilo del contenido */
-.container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    position: relative;
-    z-index: 1;
+.glitch-text::before,
+.glitch-text::after {
+  content: 'Página en Mantenimiento';
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: white;
+  z-index: -1;
+  animation: glitch-animation 2s infinite linear;
 }
 
-/* Estilo del círculo */
-.circle {
-    margin-top: 20px;
-    width: 200px;
-    height: 200px;
-    max-width: 25%;
-    max-height: 25%;
-    background-color: transparent;
-    border: 3px solid #18cdd9;
-    border-radius: 50%;
-    margin-bottom: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
+.glitch-text::before {
+  left: -2px;
+  text-shadow: 1px 0px 0 red, 0px 1px 0 blue, -1px 0px 0 green, 0px -1px 0 cyan;
+  animation-delay: -0.1s;
 }
 
-/* Estilo de la imagen dentro del círculo */
-.circle img {
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: contain;
-    border-radius: 50%;
+.glitch-text::after {
+  left: 2px;
+  text-shadow: 1px 0px 0 red, 0px 1px 0 blue, -1px 0px 0 green, 0px -1px 0 cyan;
+  animation-delay: -0.2s;
 }
 
-
-h1 {
-    font-size: 72px;
-    margin-top: -25px;
-    color: #18cdd9;
-    position: relative;
+@keyframes glitch-animation {
+  0% {
+    clip-path: inset(20% 0 60% 0);
+  }
+  10% {
+    clip-path: inset(50% 0 40% 0);
+  }
+  20% {
+    clip-path: inset(30% 0 50% 0);
+  }
+  30% {
+    clip-path: inset(60% 0 30% 0);
+  }
+  40% {
+    clip-path: inset(10% 0 70% 0);
+  }
+  50% {
+    clip-path: inset(80% 0 10% 0);
+  }
+  60% {
+    clip-path: inset(20% 0 60% 0);
+  }
+  70% {
+    clip-path: inset(50% 0 40% 0);
+  }
+  80% {
+    clip-path: inset(30% 0 50% 0);
+  }
+  90% {
+    clip-path: inset(60% 0 30% 0);
+  }
+  100% {
+    clip-path: inset(10% 0 70% 0);
+  }
 }
 
-h1:hover {
-    color: white;
-    text-shadow: 0 0 20px rgba(24, 205, 217, 0.8);
+@media screen and (max-width: 600px) {
+  .glitch-text {
+    font-size: 3rem;
+  }
 }
 
-.title {
-    font-size: 48px;
-    margin-bottom: 60px;
+@media screen and (max-width: 400px) {
+  .glitch-text {
+    font-size: 2.5rem;
+  }
 }
-
-.buttons {
-    margin-top: -30px;
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-}
-
-.button {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: rgba(24, 205, 217, 0.2);
-    color: white;
-    border: 3px solid #18cdd9;
-    border-radius: 10px;
-    text-decoration: none;
-    font-size: 36px;
-}
-
-.button:hover {
-    background-color: rgba(24, 205, 217, 0.2);
-    color: white;
-    box-shadow: 0 0 20px rgba(24, 205, 217, 0.8);
-}
-
-
-
-
-/* Consulta de medios para pantallas de ancho máximo de 768px */
-@media (max-width: 768px) {
-    /* Ajustes para pantallas más pequeñas */
-    .circle {
-        width: 100px;
-        height: 100px;
-        margin-bottom: 10px;
-    }
-
-    .circle img {
-        max-width: 100px;
-        max-height: 100px;
-    }
-
-    h1 {
-        font-size: 48px;
-        margin-top: -15px;
-        color: #18cdd9; /* Cambia el color del texto para que coincida con el brillo de los botones en pantallas más pequeñas */
-    }
-
-    .title {
-        font-size: 36px;
-        margin-bottom: 40px;
-    }
-
-    .button {
-        padding: 15px 30px;
-        font-size: 24px;
-    }
-
-    .buttons {
-        margin-top: 1px;
-    }
-}
-
