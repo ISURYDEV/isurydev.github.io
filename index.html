@@ -4,11 +4,163 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Página en Mantenimiento</title>
-  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body, html {
+      height: 100%;
+      font-family: 'Courier New', Courier, monospace;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, #001f3d, #002e4d, #002b3e);  
+      background-size: 400% 400%;
+      animation: gradientBackground 5s ease infinite;
+    }
+
+    .glitch-container {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      width: 100%;
+    }
+
+    .glitch-text {
+      font-size: 4rem;
+      color: transparent;
+      background: linear-gradient(45deg, #00c2ff, #9b00d1);  
+      -webkit-background-clip: text;
+      background-clip: text;
+      text-transform: uppercase;
+      letter-spacing: 5px;
+      position: relative;
+      z-index: 10;
+      text-align: center;
+      display: inline-block;
+    }
+
+    .glitch-text::before,
+    .glitch-text::after {
+      content: 'Página en Mantenimiento';
+      position: absolute;
+      top: 0;
+      left: 0;
+      color: #fff;
+      z-index: -1;
+      animation: glitch-anim 1s infinite linear;
+    }
+
+    .glitch-text::before {
+      left: -2px;
+      text-shadow: 2px 0 0 rgba(0,255,255,0.8), -2px 0 0 rgba(255,0,255,0.8);
+      animation-delay: -0.1s;
+    }
+
+    .glitch-text::after {
+      left: 2px;
+      text-shadow: -2px 0 0 rgba(0,255,255,0.8), 2px 0 0 rgba(255,0,255,0.8);
+      animation-delay: -0.3s;
+    }
+
+    @keyframes glitch-anim {
+      0% {
+        clip-path: inset(0% 0% 100% 0);
+        transform: translate(0);
+      }
+      10% {
+        clip-path: inset(10% 0 90% 0);
+        transform: translate(3px, -2px);
+      }
+      20% {
+        clip-path: inset(20% 0 80% 0);
+        transform: translate(-4px, 3px);
+      }
+      30% {
+        clip-path: inset(30% 0 70% 0);
+        transform: translate(-5px, -4px);
+      }
+      40% {
+        clip-path: inset(40% 0 60% 0);
+        transform: translate(6px, 3px);
+      }
+      50% {
+        clip-path: inset(50% 0 50% 0);
+        transform: translate(-3px, -5px);
+      }
+      60% {
+        clip-path: inset(60% 0 40% 0);
+        transform: translate(4px, 2px);
+      }
+      70% {
+        clip-path: inset(70% 0 30% 0);
+        transform: translate(-2px, 6px);
+      }
+      80% {
+        clip-path: inset(80% 0 20% 0);
+        transform: translate(3px, -3px);
+      }
+      90% {
+        clip-path: inset(90% 0 10% 0);
+        transform: translate(-6px, 1px);
+      }
+      100% {
+        clip-path: inset(0% 0% 100% 0);
+        transform: translate(0);
+      }
+    }
+
+    @keyframes gradientBackground {
+      0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+
+    @media screen and (max-width: 600px) {
+      .glitch-text {
+        font-size: 3rem;
+      }
+    }
+
+    @media screen and (max-width: 400px) {
+      .glitch-text {
+        font-size: 2.5rem;
+      }
+    }
+  </style>
 </head>
 <body>
   <div class="glitch-container">
     <h1 class="glitch-text">Página en Mantenimiento</h1>
   </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const glitchText = document.querySelector('.glitch-text');
+
+      function startGlitch() {
+        const randomDelay = Math.random() * 0.5 + 0.1; // Intervalo aleatorio entre 0.1s y 0.5s
+        const randomAnimationDuration = Math.random() * 0.8 + 0.4; // Duración aleatoria entre 0.4s y 1.2s
+        glitchText.style.animationDuration = `${randomAnimationDuration}s`;
+        glitchText.style.animationDelay = `${randomDelay}s`;
+
+        setTimeout(startGlitch, randomDelay * 1000);
+      }
+
+      startGlitch(); // Inicia el efecto
+    });
+  </script>
 </body>
 </html>
