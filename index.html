@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script>document.documentElement.classList.add('js');</script>
+  <title>Ismail KRAMDI BOUZOUADA — Étudiant en informatique, recherche d'alternance</title>
+  <meta name="description" content="Portfolio d'Ismail KRAMDI BOUZOUADA — étudiant en réorientation vers l'informatique appliquée. Projets concrets : applications, web, jeux et outils numériques. Recherche d'alternance à partir de septembre 2026." />
+  <meta name="author" content="Ismail KRAMDI BOUZOUADA" />
+  <link rel="canonical" href="https://isury.dev/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Ismail KRAMDI BOUZOUADA — Portfolio" />
+  <meta property="og:description" content="Étudiant en informatique appliquée. Projets concrets en développement, applications et outils numériques. Recherche d'alternance." />
+  <meta property="og:url" content="https://isury.dev/" />
+  <meta property="og:image" content="https://isury.dev/assets/ismail.jpg" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="theme-color" content="#05060f" />
+
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ============ NAV ============ -->
+  <header class="nav">
+    <div class="container">
+      <a class="nav-brand" href="#top" aria-label="Accueil">
+        <img src="assets/favicon.svg" alt="" width="28" height="28" />
+        <span>Ismail K.B.</span>
+      </a>
+      <nav class="nav-links" id="navLinks" aria-label="Navigation principale">
+        <a href="#about">À propos</a>
+        <a href="#projects">Projets</a>
+        <a href="#skills">Compétences</a>
+        <a href="#parcours">Parcours</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <button class="nav-toggle" id="navToggle" aria-label="Ouvrir le menu" aria-expanded="false">☰</button>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <!-- ============ HERO ============ -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-intro reveal">
+          <span class="eyebrow"><span class="badge-dot"></span> Portfolio personnel</span>
+          <h1>Ismail <span class="accent">KRAMDI BOUZOUADA</span></h1>
+          <span class="hero-role">Étudiant en informatique · Recherche d'alternance</span>
+          <p class="hero-lede">
+            Étudiant en réorientation vers l'informatique appliquée, je construis des projets
+            concrets autour du développement, des applications utiles, du jeu vidéo et des outils
+            numériques. Je recherche une alternance pour progresser dans un cadre professionnel et
+            contribuer à des projets réels.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-cta" href="#projects">Voir mes projets</a>
+            <a class="btn btn-pill" id="cvBtn" href="CV_Ismail_KRAMDI_Support_Systemes_Reseaux.pdf" download="CV-Ismail-Kramdi-Bouzouada.pdf" hidden>Télécharger mon CV</a>
+            <a class="btn btn-outline" href="https://github.com/ISURYDEV" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <a class="btn btn-outline" href="https://www.linkedin.com/in/ismail-kramdi-bouzouada-0328b0416/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <a class="btn btn-outline" href="#contact">Me contacter</a>
+          </div>
+        </div>
+        <div class="hero-photo-wrap reveal">
+          <img class="hero-photo" src="assets/ismail.jpg" alt="Portrait d'Ismail Kramdi Bouzouada, en costume sombre et cravate bleue." width="340" height="340" />
+          <span class="hero-photo-tag">Rillieux-la-Pape · Lyon</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ABOUT ============ -->
+    <section class="section" id="about">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">01 — À propos</span>
+          <h2 class="section-title">Construire pour apprendre, apprendre en construisant.</h2>
+        </div>
+        <div class="about-grid">
+          <div class="about-text reveal">
+            <p>
+              Je suis étudiant en <strong>réorientation vers l'informatique appliquée</strong>. Mon
+              objectif est clair : progresser dans un cadre professionnel et participer à des projets
+              réels, plutôt que de rester sur la théorie.
+            </p>
+            <p>
+              Je suis <strong>pré-admis en BUT Réseaux &amp; Télécommunications en apprentissage</strong>
+              à partir de septembre 2026, sous réserve de la signature d'un contrat. Je recherche une
+              alternance en <strong>support informatique, systèmes &amp; réseaux, support applicatif ou
+              développement</strong>.
+            </p>
+            <p>
+              J'aime créer des outils <strong>utiles, concrets et publiables</strong> : la plupart de mes
+              projets partent d'un vrai besoin et finissent en ligne. Je suis à l'aise sous
+              <strong>Linux Debian</strong> et en ligne de commande.
+            </p>
+            <p>
+              Je gère aussi une <strong>micro-entreprise</strong> de revente, ce qui m'a donné le goût de
+              l'organisation, de l'autonomie et des outils numériques — au point d'en faire une
+              application complète, Revendo.
+            </p>
+          </div>
+          <aside class="about-card reveal">
+            <h3>En bref</h3>
+            <div class="fact"><span class="fact-k">Localisation</span><span class="fact-v">Rillieux-la-Pape / Lyon</span></div>
+            <div class="fact"><span class="fact-k">Disponible</span><span class="fact-v">Alternance — septembre 2026</span></div>
+            <div class="fact"><span class="fact-k">Recherche</span><span class="fact-v">Support, systèmes &amp; réseaux, support applicatif, développement</span></div>
+            <div class="fact"><span class="fact-k">Système</span><span class="fact-v">Linux Debian, ligne de commande</span></div>
+            <div class="fact"><span class="fact-k">Formation</span><span class="fact-v">BUT R&amp;T (pré-admis, sous réserve de contrat)</span></div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PROJECTS ============ -->
+    <section class="section" id="projects">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">02 — Projets</span>
+          <h2 class="section-title">Des projets que j'utilise, pas seulement que j'ai codés.</h2>
+          <p class="section-intro">Une sélection orientée concret : un vrai outil métier, un projet d'équipe ambitieux, et des applications publiées.</p>
+        </div>
+
+        <div class="projects-list">
+
+          <!-- Revendo -->
+          <article class="project project-featured reveal">
+            <div class="project-media">
+              <span class="project-rank">Projet principal</span>
+              <img src="assets/preview-revendo.jpg" alt="Aperçu du tableau de bord de Revendo (données fictives de démonstration)." loading="lazy" />
+            </div>
+            <div class="project-body">
+              <div class="project-head">
+                <h3>Revendo</h3>
+                <span class="badge badge-beta"><span class="badge-dot"></span> BETA · usage quotidien</span>
+              </div>
+              <p class="project-desc">
+                Revendo est une application que j'ai développée pour répondre à un besoin réel : mieux
+                gérer mon activité de revente. Elle me sert au quotidien pour suivre le chiffre
+                d'affaires, le stock, les ventes, les dépenses et la rentabilité. La version publique
+                utilise uniquement des <strong>données fictives</strong> afin de préserver la
+                confidentialité de mon activité.
+              </p>
+              <div class="tech-row">
+                <span class="tech">React</span><span class="tech">TypeScript</span><span class="tech">Electron</span>
+                <span class="tech">SQLite</span><span class="tech">Vite</span><span class="tech">Tailwind</span>
+              </div>
+              <div class="project-actions">
+                <a class="btn btn-cta btn-sm" href="https://revendo.vercel.app" target="_blank" rel="noopener noreferrer">Démo web (fictive)</a>
+                <a class="btn btn-outline btn-sm" href="https://github.com/ISURYDEV/revendo" target="_blank" rel="noopener noreferrer">Code GitHub</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Sanity Junction -->
+          <article class="project project-featured reveal">
+            <div class="project-media">
+              <span class="project-rank">Projet en équipe</span>
+              <img src="assets/preview-sanity.jpg" alt="Écran de présentation de Sanity Junction." loading="lazy" />
+            </div>
+            <div class="project-body">
+              <div class="project-head">
+                <h3>Sanity Junction</h3>
+                <span class="badge"><span class="badge-dot"></span> En développement actif</span>
+              </div>
+              <p class="project-desc">
+                Sanity Junction est un visual novel psychologique développé en équipe avec Ren'Py/Python.
+                Le projet est actuellement en développement actif et vise une publication commerciale.
+                Pour respecter la confidentialité de l'équipe, seuls certains éléments techniques et une
+                démo limitée sont présentés publiquement.
+              </p>
+              <div class="tech-row">
+                <span class="tech">Ren'Py</span><span class="tech">Python</span><span class="tech">HTML5 / WebAssembly</span>
+                <span class="tech">Travail d'équipe</span>
+              </div>
+              <div class="project-actions">
+                <a class="btn btn-cta btn-sm" href="https://sanity-junction-web.vercel.app" target="_blank" rel="noopener noreferrer">Démo web</a>
+                <a class="btn btn-outline btn-sm" href="https://github.com/ISURYDEV/sanity-junction-web" target="_blank" rel="noopener noreferrer">Démo (GitHub)</a>
+                <a class="btn btn-outline btn-sm" href="https://github.com/ISURYDEV/sanity-junction-source" target="_blank" rel="noopener noreferrer">Source (showcase)</a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+        <!-- Secondary projects -->
+        <div class="projects-grid">
+
+          <article class="project project-card reveal">
+            <div class="project-tile"><span class="glyph">$ python -m gp_space_saver</span></div>
+            <div class="project-body">
+              <div class="project-head">
+                <h3>Google Photos Cleaner</h3>
+              </div>
+              <span class="badge badge-live" style="margin-top:10px"><span class="badge-dot"></span> Open-source</span>
+              <p class="project-desc">
+                Outil CLI Python pour analyser localement un export Google Photos Takeout et repérer
+                fichiers volumineux, doublons et médias optimisables — local, testé, documenté.
+              </p>
+              <div class="tech-row">
+                <span class="tech">Python</span><span class="tech">CLI</span><span class="tech">SQLite</span><span class="tech">Tests</span>
+              </div>
+              <div class="project-actions">
+                <a class="btn btn-outline btn-sm" href="https://github.com/ISURYDEV/google-photos-cleaner" target="_blank" rel="noopener noreferrer">Code GitHub</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project project-card reveal">
+            <div class="project-tile"><span class="glyph">&lt;/&gt; C++ → Web</span></div>
+            <div class="project-body">
+              <div class="project-head">
+                <h3>Hold On, Little Heart!</h3>
+              </div>
+              <span class="badge badge-live" style="margin-top:10px"><span class="badge-dot"></span> Jouable en ligne</span>
+              <p class="project-desc">
+                Projet étudiant développé en C++ avec Grapic, puis adapté en version web jouable et en
+                version native portable — un projet académique transformé en projet publiable.
+              </p>
+              <div class="tech-row">
+                <span class="tech">C++</span><span class="tech">Raylib</span><span class="tech">CMake</span><span class="tech">JS Canvas</span>
+              </div>
+              <div class="project-actions">
+                <a class="btn btn-cta btn-sm" href="https://hold-on-little-heart-web.vercel.app" target="_blank" rel="noopener noreferrer">Démo</a>
+                <a class="btn btn-outline btn-sm" href="https://github.com/ISURYDEV/hold-on-little-heart-web" target="_blank" rel="noopener noreferrer">Code web</a>
+                <a class="btn btn-outline btn-sm" href="https://github.com/ISURYDEV/hold-on-little-heart-native" target="_blank" rel="noopener noreferrer">Code natif</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project project-card reveal">
+            <div class="project-media">
+              <img src="assets/preview-chroniques.jpg" alt="Aperçu de l'application Les Chroniques de l'Analyse II." loading="lazy" />
+            </div>
+            <div class="project-body">
+              <div class="project-head">
+                <h3>Les Chroniques de l'Analyse II</h3>
+              </div>
+              <span class="badge badge-live" style="margin-top:10px"><span class="badge-dot"></span> En ligne</span>
+              <p class="project-desc">
+                Application web pédagogique gamifiée pour réviser des notions d'Analyse 2 dans un univers
+                médiéval — exercices transformés en quêtes et combats.
+              </p>
+              <div class="tech-row">
+                <span class="tech">React</span><span class="tech">TypeScript</span><span class="tech">Vite</span><span class="tech">KaTeX</span>
+              </div>
+              <div class="project-actions">
+                <a class="btn btn-cta btn-sm" href="https://les-chroniques-analyse-5io92l7xb-isury-s-projects.vercel.app/" target="_blank" rel="noopener noreferrer">Démo</a>
+                <a class="btn btn-outline btn-sm" href="https://github.com/ISURYDEV/les-chroniques-analyse-ii" target="_blank" rel="noopener noreferrer">Code GitHub</a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SKILLS ============ -->
+    <section class="section" id="skills">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">03 — Compétences</span>
+          <h2 class="section-title">Des bases solides, en progression constante.</h2>
+        </div>
+        <div class="skills-grid">
+          <div class="skill-card reveal"><h3>Développement</h3><div class="chips"><span class="chip">Python</span><span class="chip">C</span><span class="chip">C++</span><span class="chip">JavaScript</span><span class="chip">TypeScript</span><span class="chip">HTML</span><span class="chip">CSS</span></div></div>
+          <div class="skill-card reveal"><h3>Front-end</h3><div class="chips"><span class="chip">React</span><span class="chip">Vite</span><span class="chip">Interfaces web</span><span class="chip">Responsive</span></div></div>
+          <div class="skill-card reveal"><h3>Applications</h3><div class="chips"><span class="chip">Electron</span><span class="chip">SQLite</span><span class="chip">Logique métier</span><span class="chip">Local-first</span></div></div>
+          <div class="skill-card reveal"><h3>Systèmes</h3><div class="chips"><span class="chip">Linux Debian</span><span class="chip">Ligne de commande</span><span class="chip">Bash</span></div></div>
+          <div class="skill-card reveal"><h3>Réseaux</h3><div class="chips"><span class="chip">Bases TCP/IP</span><span class="chip">Adressage IP</span><span class="chip">Services réseau</span></div></div>
+          <div class="skill-card reveal"><h3>Outils</h3><div class="chips"><span class="chip">Git</span><span class="chip">GitHub</span><span class="chip">VS Code</span><span class="chip">Vercel</span><span class="chip">Claude Code</span><span class="chip">Codex</span></div></div>
+        </div>
+        <p class="skills-note reveal">Soft skills — autonomie · rigueur · curiosité · persévérance · organisation</p>
+      </div>
+    </section>
+
+    <!-- ============ PARCOURS (formation + expérience) ============ -->
+    <section class="section" id="parcours">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">04 — Parcours</span>
+          <h2 class="section-title">Formation &amp; expérience</h2>
+        </div>
+        <div class="split">
+          <div class="reveal">
+            <h3 style="font-family:var(--font-mono);font-size:13px;color:var(--celestial-light);text-transform:uppercase;letter-spacing:.1em;margin-bottom:22px">Formation</h3>
+            <div class="timeline">
+              <div class="tl-item">
+                <span class="tl-period">2026 – 2029 (prévu)</span>
+                <h3>BUT Réseaux &amp; Télécommunications</h3>
+                <p class="tl-org">IUT Nord Franche-Comté — Montbéliard</p>
+                <p class="tl-note">Pré-admis en apprentissage, sous réserve de la signature d'un contrat.</p>
+              </div>
+              <div class="tl-item">
+                <span class="tl-period">2023 – 2026</span>
+                <h3>L1 Mathématiques – Informatique</h3>
+                <p class="tl-org">Université Claude Bernard Lyon 1</p>
+                <p class="tl-note">Parcours de réorientation vers une formation plus concrète et professionnalisante en informatique.</p>
+              </div>
+              <div class="tl-item">
+                <span class="tl-period">2023</span>
+                <h3>Baccalauréat général</h3>
+                <p class="tl-org">Lycée Albert Camus — spécialités Mathématiques &amp; Physique</p>
+              </div>
+            </div>
+          </div>
+          <div class="reveal">
+            <h3 style="font-family:var(--font-mono);font-size:13px;color:var(--celestial-light);text-transform:uppercase;letter-spacing:.1em;margin-bottom:22px">Expérience</h3>
+            <div class="timeline">
+              <div class="tl-item">
+                <span class="tl-period">Depuis mars 2026</span>
+                <h3>Micro-entrepreneur — e-commerce / achat-revente</h3>
+                <p class="tl-note">Autonomie, organisation et relation client. Un besoin réel qui a mené au développement de Revendo.</p>
+              </div>
+              <div class="tl-item">
+                <span class="tl-period">2024 – 2026</span>
+                <h3>Missions d'intérim — Supplay</h3>
+                <p class="tl-note">Surveillance d'examens, restauration, préparation de commandes : rigueur, ponctualité, respect des consignes.</p>
+              </div>
+              <div class="tl-item">
+                <span class="tl-period">2023 – 2025</span>
+                <h3>Grande distribution — Auchan / Intermarché</h3>
+                <p class="tl-note">Mise en rayon, caisse, accueil client : fiabilité, adaptation et relation client.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="contact-card reveal">
+          <span class="eyebrow">05 — Contact</span>
+          <h2>Discutons d'une alternance.</h2>
+          <p>Disponible pour une alternance à partir de septembre 2026 en support informatique, systèmes &amp; réseaux, support applicatif ou développement. N'hésitez pas à me contacter.</p>
+          <div class="contact-actions">
+            <a class="btn btn-cta" href="mailto:isury.job@gmail.com">isury.job@gmail.com</a>
+            <a class="btn btn-pill" id="cvBtn2" href="CV_Ismail_KRAMDI_Support_Systemes_Reseaux.pdf" download="CV-Ismail-Kramdi-Bouzouada.pdf" hidden>Télécharger mon CV</a>
+            <a class="btn btn-outline" href="https://github.com/ISURYDEV" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <a class="btn btn-outline" href="https://www.linkedin.com/in/ismail-kramdi-bouzouada-0328b0416/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          </div>
+          <div class="contact-meta">
+            <span>📍 Rillieux-la-Pape / Lyon</span>
+            <span>📞 <a href="tel:+33782453066">07 82 45 30 66</a></span>
+            <span>🗓️ Alternance · sept. 2026</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container">
+      <p>© <span id="year">2026</span> Ismail KRAMDI BOUZOUADA — Portfolio personnel.</p>
+      <div class="links">
+        <a href="https://isury.dev" target="_blank" rel="noopener noreferrer">isury.dev</a>
+        <a href="https://github.com/ISURYDEV" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="https://www.linkedin.com/in/ismail-kramdi-bouzouada-0328b0416/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
