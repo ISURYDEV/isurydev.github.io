@@ -38,10 +38,10 @@
     revealEls.forEach(function (el) { el.classList.add('in'); });
   }
 
-  // Bouton CV : affiché uniquement si CV.pdf existe réellement
+  // Bouton CV : affiché uniquement si le fichier CV existe réellement
   var cvButtons = document.querySelectorAll('#cvBtn, #cvBtn2');
   if (cvButtons.length) {
-    fetch('CV_Ismail_KRAMDI_Support_Systemes_Reseaux.pdf', { method: 'HEAD' })
+    fetch('CV_Ismail_Kramdi_Bouzouada_Alternance_Informatique.pdf', { method: 'HEAD' })
       .then(function (r) {
         if (r.ok) {
           cvButtons.forEach(function (b) { b.removeAttribute('hidden'); });
